@@ -1,1 +1,154 @@
-working
+<!DOCTYPE html>
+<html style="font-size: 100px;">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<title>TeenPatti Palace</title>
+	<meta name="keyword" content="">
+	<meta name="description" content="">
+	<link href="index.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<!--
+	<script src="js/jquery.js" type="text/javascript"></script>
+	-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+	<!--
+	<script src="js/swiper.jquery.min.js" type="text/javascript"></script>
+	-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+	
+	<script src="js/pub_rem.js" type="text/javascript"></script>
+	<!-- ,-->
+	<!--
+	<script type="text/javascript" charset="UTF-8" src="https://res.cdn.openinstall.io/openinstall.js"></script>
+	-->
+	<script type="text/javascript" src="js/download.js"></script>
+</head>
+
+<style>
+	.webLink{
+		margin-top: 0.5rem;
+		margin-bottom: 10px;
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		align-items: center;
+		width: 100%;
+		font-size: 0.25rem;
+	}
+	.linkInfo{
+		margin: 5px 0;
+		text-decoration: underline;
+	}
+</style>
+<script>
+	function openLink(id){
+        if(id==1){
+			window.open('About.html')
+		}
+		if(id==2){
+			window.open('Terms.html')
+		}
+		if(id==3){
+			window.open('privacy-policy.html')
+		}
+		if(id==4){
+			window.open('CancellationRefund.html')
+		}
+		if(id==5){
+			window.open('Pricing.html')
+		}
+		if(id==6){
+			//window.open('https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5001684&planId=262#')
+			window.open('contact-us.html')
+		}
+	}
+</script>
+<body>
+	<div class="container">
+		<div id="top" onclick="DownSoft()">
+
+		</div>
+
+		<img class="bg" src="img/down_page01.jpg" alt="">
+
+		<!--   -->
+		<div class="kefu">
+			<a href="https://vue.livelyhelp.chat/chatWindow.aspx?siteId=5001684&amp;planId=262#">
+
+			</a>
+		</div>
+		
+		<!--   -->
+		<div class="downBtn" onclick="DownSoft()">
+			
+		</div>
+		
+		<!--   -->
+		<div class="downNum">
+			<img src="img/downNum.png" style="width: 100%;" alt="">
+		</div>
+
+		<!--   -->
+		<div class="bannerBox">
+			<div class="banner">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="img/ad_01.png" alt="" /></div>
+					<div class="swiper-slide"><img src="img/ad_02.png" alt="" /></div>
+				</div>
+			</div>
+		</div>
+        <!--   -->
+		<div class="footer">
+			 <div class="webLink">
+				<div onclick="openLink(1)" class="linkInfo">About Us</div>
+				<div onclick="openLink(2)" class="linkInfo">Terms & Conditions</div>
+				<div onclick="openLink(3)" class="linkInfo">Privacy Policy</div>
+				<div onclick="openLink(4)" class="linkInfo">Cancellation & Refund Policy</div>
+				<div onclick="openLink(5)" class="linkInfo">Pricing</div>
+				<div onclick="openLink(6)" class="linkInfo">Contact Us</div>
+			 </div>
+			<p style="margin-bottom: 0.2rem; font-size: 0.25rem;text-align: center;">Copyright 2020 teenpattipalace.com  All rights reseved</p>
+		</div>
+	</div>
+</body>
+
+<script>
+	$(document).ready(function pageReady() {
+
+	})
+</script>
+<script>
+	$(function () {
+		var mySwiper = new Swiper('.banner', {
+			slidesPerView: 1,
+			visibilityFullFit: true,
+			autoplay: 3000,
+			loop: true,
+		});
+	});
+</script>
+<script>
+	var topBanner = document.getElementById('top');
+	function browserRedirect() {
+		var sUserAgent = navigator.userAgent.toLowerCase();
+		var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+		var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+		var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+		var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+		var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+		var bIsAndroid = sUserAgent.match(/android/i) == "android";
+		var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+		var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+		if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+			topBanner.style.visibility = "visible"
+		} else {
+			topBanner.style.visibility = "hidden"
+		}
+	}
+	browserRedirect();
+</script>
+</html>
